@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const About = () => {
@@ -21,7 +22,7 @@ const About = () => {
       {/* Replace the src with your actual image */}
       <div className="img h-[300px] w-[300px] rounded-lg shadow-lg  hidden  sm:flex sm:justify-center items-center  ">
 
-      <img
+      <Image
         src="/my-photo.jpg"
         alt="Onwumelu Chijioke"
         className="w-full object-cover "

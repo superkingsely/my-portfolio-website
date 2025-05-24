@@ -44,7 +44,8 @@ const HeroSection = () => {
         <div className=" box2 border flex justify-center items-center">
      <div className="rounded-full w-64 h-64 shadow-lg flex justify-center items-center
      ">
-     <img
+      
+     <Image
        src="/profile.jpg"
      alt="Onwumelu Chijioke"
        className="  object-cover  "
