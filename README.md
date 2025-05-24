@@ -20,11 +20,11 @@ I’m Onwumelu Chijioke, a passionate web developer with a knack for creating el
 ✅ **Project Showcases** – My best work, beautifully displayed  
 ✅ **Contact Section** – Reach out for opportunities and collaborations  
 
----
+<!-- ---
 
 ## 🚀 How to Run Locally
 
 1️⃣ Install dependencies:
 
 ```bash
-npm install
+npm install -->
