@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-
+import img1 from '../../public/images/sketch2.jpg'
 const About = () => {
   return (
     // <div className="">
@@ -20,12 +20,13 @@ const About = () => {
     {/* box1 */}
     <div className="img flex-shrink-0 w-full md:w-1/3">
       {/* Replace the src with your actual image */}
-      <div className="img h-[300px] w-[300px] rounded-lg shadow-lg  hidden  sm:flex sm:justify-center items-center  ">
+      <div className=" relative img h-[300px] w-[300px] rounded-lg shadow-lg  hidden  sm:flex sm:justify-center items-center  ">
 
       <Image
-        src="/my-photo.jpg"
+        src={img1}
         alt="Onwumelu Chijioke"
-        className="w-full object-cover "
+        fill
+        className="w-full object-cover   "
       />
       </div>
     </div>
