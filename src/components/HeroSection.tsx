@@ -6,9 +6,9 @@ import img1 from '../../public/images/FB_IMG_1748168596292.jpg'
 const HeroSection = () => {
   return (
 
-    <div className="flex flex-col-reverse sm:flex-row  border pt-[50px] md:pt-[100px] min-h-[80vh] ">
+    <div className="flex flex-col-reverse sm:flex-row   pt-[50px] md:pt-[100px] min-h-[80vh] ">
       {/* box1 */}
-      <div className="box1   border flex-[1] ">
+      <div className="box1    flex-[1] ">
         <div className="h1 text-3xl sm:text-4xl md:text-5xl font-bold mb-4 flex  gap-2 ">
            <span className=' ' >Hi</span>
            <div className='flex gap-2 flex-col' >
@@ -25,7 +25,7 @@ const HeroSection = () => {
         </div>
          <div className=" z-[1] flex gap-4 mt-[20px] justify-center sm:justify-start ">
        <a
-         href="/Onwumelu-Chijioke-CV.pdf"
+         href='/Onwumelu_Chijioke_CV.pdf'
          download
          className=" z-10 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
        >
@@ -43,7 +43,7 @@ const HeroSection = () => {
         </div>
       </div>
       {/* box2 */}
-      <div className="box2 border flex-[1] flex justify-center ">
+      <div className="box2  flex-[1] flex justify-center ">
         <div className=" box2  flex justify-center items-center">
      <div className=" p-[10px]  rounded-full w-[300px] h-[300px] overflow-hidden shadow-lg flex justify-center items-center
      ">
@@ -61,7 +61,7 @@ const HeroSection = () => {
     </div>
 //    <div className="grid md:grid-cols-2 gap-8 items-center px-4 py-12 max-w-6xl mx-auto min-h-[80vh] ">
 //     {/* box1 */}
-//   <div className="flex flex-col justify-center box1 border ">
+//   <div className="flex flex-col justify-center box1  ">
 //     <h1 className="text-4xl md:text-5xl font-bold mb-4">
 //       Hi, I'm Onwumelu Chijioke
 //     </h1>

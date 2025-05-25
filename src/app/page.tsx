@@ -6,7 +6,7 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
    <section className="hero-section flex justify-center " id="home"  >
-    <div className="section-content max-w-[1200px] w-[100%] border min-h-[80vh] ">
+    <div className="section-content max-w-[1200px] w-[100%]  min-h-[80vh] ">
       <HeroSection/>
       <About/>
       <Projects/>

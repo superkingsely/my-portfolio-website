@@ -12,7 +12,7 @@ const About = () => {
     //         <div className="details"></div>
     //     </div>
     // </div>
-<div className=" mx-auto p-6 border border-red-600 " id='about' >
+<div className=" mx-auto p-6   " id='about' >
   <div className="h1 mb-4 mt-[50px] flex justify-center ">
     <h2 className="text-3xl font-bold text-gray-800">About Me</h2>
   </div>
@@ -31,7 +31,7 @@ const About = () => {
       </div>
     </div>
     {/* box2 */}
-    <div className="details flex-1 flex justify-center flex-col border ">
+    <div className="details flex-1 flex justify-center flex-col  ">
       <p className="text-lg sm:text-start  text-center sm:  text-gray-600 leading-relaxed">
         Hello! I’m <span className="font-semibold text-gray-800">Onwumelu Chijioke</span>,
         a passionate <span className="font-semibold text-gray-800">Full-Stack Developer</span> with
@@ -48,7 +48,7 @@ const About = () => {
       </p>
       <div className="mt-4 flex gap-4 justify-center sm:justify-start  ">
         <a
-          href="/ChijiokeCV.pdf"
+          href="/Onwumelu_Chijioke_CV.pdf"
           download
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
         >
@@ -56,7 +56,7 @@ const About = () => {
         </a>
         <a
           href="/contact"
-          className="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition"
+          className=" border-blue-600 border text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition"
         >
           Hire Me
         </a>
