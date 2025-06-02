@@ -3,8 +3,8 @@ import React from 'react'
 const Contact = () => {
   return (
    <div  className='min-h-[70vh] pt-[50px] mt-[30px]  ' id='contact' >
-       <div className="contact-row flex gap-[20px] ">
-          <div className="contact-col-1">
+       <div className="contact-row flex flex-col sm:flex-row  gap-[20px] ">
+          <div className="contact-col-1 ps-[50px] sm:ps-[0px] ">
             <div className="flex flex-col gap-5 ">
               <span className='font-[600] text-[50px]  ' >Contact me</span>
               <span className='font-[600] text-[40px]  '  >08029696733</span>
