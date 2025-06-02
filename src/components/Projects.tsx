@@ -29,13 +29,13 @@ import imgproj1 from '../../public/images/hcj portf.png'
 const projects = [
   {
     title: "Html and css portfolio",
-    description: "A full-stack app that does amazing things.",
+    description: "A classic attracting hero settion to catch the eyes of users",
     image: imgproj,
     live: "https://hc-portf.netlify.app",
   },
   {
     title: "js Portfolio Website",
-    description: "My personal portfolio to showcase my work.",
+    description: "A great html css & js project ",
     image: imgproj1,
     live: "https://hcj-portf.netlify.app",
   },
@@ -66,7 +66,7 @@ export default function Projects() {
       className=" mt-[30px] w-full min-h-[80vh] flex flex-col py-12 relative overflow-hidden bg-gray-100"
     >
       {/* Title */}
-      <div className="text-center mb-6 mt-[-40px] ">
+      <div className="text-center mb-6 mt-[-40px]  ">
         <h2 className="text-3xl font-bold">My Awesome</h2>
         <h3 className="text-2xl font-semibold">Projects</h3>
       </div>
@@ -76,20 +76,21 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`absolute top-0 left-0 w-full h-full flex justify-center items-center transition-opacity duration-700 ${
+            className={` mt-[35px] absolute top-0 left-0 w-full h-full flex justify-center items-center transition-opacity duration-700 ${
               index === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <div className=" mt-[10px] relative w-full max-w-[800px] h-[300px] rounded overflow-hidden shadow-lg">
+            <div className=".img-p mt-[10px] relative w-full max-w-[900px] h-[350px] rounded overflow-hidden shadow-lg">
               {/* Image - set proper width/height */}
               <Image
                 src={project.image}
                 alt={project.title}
                 layout="fill"
                 objectFit="cover"
+                className="img1"
               />
               {/* Overlay content */}
-              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex flex-col justify-center items-center text-white p-4">
+              <div className=" overlay absolute top-0 left-0 w-full    h-full bg-black bg-opacity-30 flex flex-col justify-center items-center text-white p-4 cursor-pointer ">
                 <h4 className="text-xl font-semibold">{project.title}</h4>
                 <p className="text-center max-w-[600px]">{project.description}</p>
                 <Link
@@ -108,13 +109,13 @@ export default function Projects() {
       {/* Buttons */}
       <button
         onClick={prevSlide}
-        className=" z-[10] absolute top-1/2 left-4 transform -translate-y-1/2 bg-white shadow rounded-full p-2 hover:bg-gray-200 transition cursor-pointer"
+        className=" z-[10] absolute top-1/2 left-4 transform -translate-y-1/2 bg-white shadow rounded-full p-2 hover:bg-gray-200 transition cursor-pointer w-[50px] h-[50px] font-[900] text-2xl "
       >
         &larr;
       </button>
       <button
         onClick={nextSlide}
-        className=" z-[10] absolute top-1/2 right-4 transform -translate-y-1/2 bg-white shadow rounded-full p-2 hover:bg-gray-200 transition cursor-pointer"
+        className=" z-[10] absolute top-1/2 right-4 transform -translate-y-1/2 bg-white shadow rounded-full p-2 hover:bg-gray-200 transition cursor-pointer w-[50px] h-[50px] font-[900] text-2xl "
       >
         &rarr;
       </button>
