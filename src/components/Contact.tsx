@@ -1,5 +1,5 @@
 import React from 'react'
-
+// -->
 const Contact = () => {
   return (
    <div  className='min-h-[70vh] pt-[50px] mt-[30px]  ' id='contact' >
