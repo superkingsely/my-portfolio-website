@@ -5,14 +5,19 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import imgproj from '../../public/images/hc-portfolio.png'
+import imgproj0 from '../../public/images/hc-portfolio.png'
 import imgproj1 from '../../public/images/hcj portf.png'
+import imgproj2 from '../../public/images/todo-list-completed.png'
 
-const projects = [
+
+
+export default function Projects() {
+  const [current, setCurrent] = useState(0);
+  const [projects,setProjects]=useState([
   {
     title: "Html and css portfolio",
     description: "A classic attracting hero settion to catch the eyes of users",
-    image: imgproj,
+    image: imgproj0 ,
     live: "https://hc-portf.netlify.app",
   },
   {
@@ -21,10 +26,13 @@ const projects = [
     image: imgproj1,
     live: "https://hcj-portf.netlify.app",
   },
-];
-
-export default function Projects() {
-  const [current, setCurrent] = useState(0);
+  {
+    title: "To-Do_list App",
+    description: "A great html css & js project ",
+    image: imgproj2,
+    live: "https://superking-todolist-app.netlify.app",
+  },
+])
 
   // Auto slide
   useEffect(() => {
@@ -48,22 +56,23 @@ export default function Projects() {
       className=" mt-[30px] w-full min-h-[80vh] flex flex-col py-12 relative overflow-hidden bg-gray-100"
     >
       {/* Title */}
-      <div className="text-center mb-6 mt-[-40px]  ">
+      <div className="text-center mb-6 mt-[-20px]  ">
         <h2 className="text-3xl font-bold">My Awesome</h2>
         <h3 className="text-2xl font-semibold">Projects</h3>
       </div>
 
       {/* Slider */}
-      <div className="relative w-full flex-1 flex justify-center items-center">
+
+      {/* <div className="relative w-full flex-1 flex justify-center items-center  border-[5px] h-full ">
         {projects.map((project, index) => (
           <div
             key={index}
-            className={` mt-[35px] absolute top-0 left-0 w-full h-full flex justify-center items-center transition-opacity duration-700 ${
+            className={` border border-red-500  w-full h-full flex justify-center items-center transition-opacity duration-700 ${
               index === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <div className=".img-p mt-[10px] relative w-full max-w-[900px] h-[350px] rounded overflow-hidden shadow-lg">
-              {/* Image - set proper width/height */}
+            <div className=".img-p  relative w-full  h-[350px] rounded overflow-hidden shadow-lg">
+
               <Image
                 src={project.image}
                 alt={project.title}
@@ -71,7 +80,7 @@ export default function Projects() {
                 objectFit="cover"
                 className="img1"
               />
-              {/* Overlay content */}
+
               <div className=" overlay absolute top-0 left-0 w-full    h-full bg-black bg-opacity-30 flex flex-col justify-center items-center text-white p-4 cursor-pointer ">
                 <h4 className="text-xl font-semibold">{project.title}</h4>
                 <p className="text-center max-w-[600px]">{project.description}</p>
@@ -84,8 +93,44 @@ export default function Projects() {
                 </Link>
               </div>
             </div>
+
           </div>
         ))}
+      </div> */}
+
+      <div className="relative border min-h-[50vh] w-[80%] mx-auto ">
+        {
+          projects.map((project,index)=>{
+
+            return(
+              <div key={index} >
+                <div className="img">
+                   <Image
+                src={projects[current].image}
+                alt={project.title}
+                layout="fill"
+                objectFit="cover"
+                className={`img1 transition-all duration-1000 ease-linear `}
+              />
+                </div>
+
+
+                  <div className=" overlay absolute top-0 left-0 w-full    h-full bg-black bg-opacity-30 flex flex-col justify-center items-center text-white p-4 cursor-pointer ">
+                <h4 className="text-xl font-semibold">{project.title}</h4>
+                <p className="text-center max-w-[600px]">{project.description}</p>
+                <Link
+                  href={project.live}
+                  target="_blank"
+                  className="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >
+                  Live Demo
+                </Link>
+              </div>
+
+              </div>
+            )
+          })
+        }
       </div>
 
       {/* Buttons */}
